@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: rgb(102, 70, 133);
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.welcome h1 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.welcome p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.logout-btn {
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #ff4444;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background-color: #cc3333;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.form-section {
+  background-color: #2e2d4e;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-section h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  color: white;
+  border: 1px solid #646cff;
+  border-radius: 20px;
+  height: 50px;
+  background-color: #363653;
+  font-size: 16px;
+  padding: 0 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #5555ff;
+}
+
+button {
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #646cff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover:not(:disabled) {
+  background-color: #5555ff;
+}
+
+button:disabled {
+  background-color: #4a4a4a;
+  cursor: not-allowed;
+}
+
+.users-section {
+  background-color: #2e2d4e;
+  padding: 30px;
+  border-radius: 10px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.users-section h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card {
+  background-color: #363653;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #646cff;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.user-email {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.user-date {
+  color: #999;
+  font-size: 12px;
+}
+
+.delete-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 18px;
+}
+
+.delete-btn:hover {
+  background-color: #cc3333;
+}
+
+.no-users {
+  text-align: center;
+  color: #ccc;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.error-message {
+  background-color: #ff4444;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  background-color: #44ff44;
+  color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
